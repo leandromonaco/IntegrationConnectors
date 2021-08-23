@@ -3,18 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{4C149715-7592-46AA-830A-D7CA53AB1378}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{54F8C5C3-DA77-4A7C-B5CF-6586AF3A3D9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{718E6441-7596-4FD5-9B36-A553D9722418}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{3CAE3E2E-0A81-424A-8F93-7329376B8753}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\CodeqlPipeline.yml = .github\workflows\CodeqlPipeline.yml
-		.github\workflows\NetCoreBuildPipeline.yml = .github\workflows\NetCoreBuildPipeline.yml
-		.github\workflows\SonarCloudPipeline.yml = .github\workflows\SonarCloudPipeline.yml
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationConnectors.AzDevOps", "src\IntegrationConnectors.AzDevOps\IntegrationConnectors.AzDevOps.csproj", "{FBDA8C7A-2BC9-43DB-9B5B-88CE27C0DA3A}"
 EndProject
@@ -42,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationConnectors.Test"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationConnectors.Twilio", "src\IntegrationConnectors.Twilio\IntegrationConnectors.Twilio.csproj", "{78958579-74D1-4215-B124-1C9AD018C773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationConnectors.SendGrid", "src\IntegrationConnectors.SendGrid\IntegrationConnectors.SendGrid.csproj", "{0A98A605-1A37-439E-8B74-B55997840D09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationConnectors.SendGrid", "src\IntegrationConnectors.SendGrid\IntegrationConnectors.SendGrid.csproj", "{0A98A605-1A37-439E-8B74-B55997840D09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -169,7 +160,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3CAE3E2E-0A81-424A-8F93-7329376B8753} = {4C149715-7592-46AA-830A-D7CA53AB1378}
 		{FBDA8C7A-2BC9-43DB-9B5B-88CE27C0DA3A} = {54F8C5C3-DA77-4A7C-B5CF-6586AF3A3D9F}
 		{E6C633ED-5EC1-47B6-B657-15B4B70E5012} = {54F8C5C3-DA77-4A7C-B5CF-6586AF3A3D9F}
 		{1A01C925-E927-455D-9356-7A9FD432BFED} = {54F8C5C3-DA77-4A7C-B5CF-6586AF3A3D9F}

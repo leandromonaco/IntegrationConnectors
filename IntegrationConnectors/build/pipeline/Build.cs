@@ -36,8 +36,8 @@ class Build : NukeBuild
     //readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
     readonly Configuration Configuration = Configuration.Release;
 
-    [Parameter] string OctopusServerUrl;
-    [Parameter] string OctopusApiKey;
+    [Parameter] string NugetUrl;
+    [Parameter] string nugetApiKey;
     [Parameter] string OctopusSpaceId;
 
     [Solution] readonly Solution Solution;
@@ -153,10 +153,7 @@ class Build : NukeBuild
                   foreach (var package in packages)
                   {
                       //if the package exists the default behaviour is to reject the package
-                      OctopusTasks.OctopusPush(o => o.SetServer(OctopusServerUrl)
-                                                     .SetApiKey(OctopusApiKey)
-                                                     .SetSpace(OctopusSpaceId)
-                                                     .SetPackage(package));
+                      NuGetTasks.NuGetPush(n => n.SetApiKey(nugetApiKey));
                   }
 
               });
