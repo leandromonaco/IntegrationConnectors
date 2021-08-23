@@ -37,8 +37,8 @@ class Build : NukeBuild
     readonly Configuration Configuration = Configuration.Release;
 
     [Parameter] string NugetUrl;
-    [Parameter] string nugetApiKey;
-    [Parameter] string OctopusSpaceId;
+    [Parameter] string NugetApiKey;
+
 
     [Solution] readonly Solution Solution;
     AbsolutePath SolutionDirectory => RootDirectory.Parent;
@@ -153,7 +153,9 @@ class Build : NukeBuild
                   foreach (var package in packages)
                   {
                       //if the package exists the default behaviour is to reject the package
-                      NuGetTasks.NuGetPush(n => n.SetApiKey(nugetApiKey));
+                      DotNetTasks.DotNetNuGetPush(n => n.SetSource(NugetUrl)
+                                                        .SetApiKey(NugetApiKey)
+                                                        .EnableSkipDuplicate());
                   }
 
               });
