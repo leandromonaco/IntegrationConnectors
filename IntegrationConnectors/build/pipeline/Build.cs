@@ -155,6 +155,7 @@ class Build : NukeBuild
                       //if the package exists the default behaviour is to reject the package
                       DotNetTasks.DotNetNuGetPush(n => n.SetSource(NugetUrl)
                                                         .SetApiKey(NugetApiKey)
+                                                        .SetTargetPath(package)
                                                         .EnableSkipDuplicate());
                   }
 
