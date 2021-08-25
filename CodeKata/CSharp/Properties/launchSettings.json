@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Kata1.cs": {
+      "commandName": "Project"
+    },
+    "Kata2.cs": {
+      "commandName": "Project"
+    }
+  }
+}
